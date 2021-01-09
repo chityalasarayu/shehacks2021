@@ -11,20 +11,20 @@ if(start > end):
   exit()
 
 #generate random number 
-random = random.randint(start,end)
+value = random.randint(start,end)
 
 #run loop until number is correctly guessed 
 while True:
-  userguess = (input("Guess random number:"))
+  userguess = (input("Guess random number: "))
 
   #checks if input number is of type integer
   if (userguess.isdigit() is False):
     print("Error. Only integers are allowed")
 
-  elif (int(userguess) < random):
+  elif (int(userguess) < value):
     print("Incorrect. The number is higher")
 
-  elif (int(userguess) > random):
+  elif (int(userguess) > value):
     print("Incorrect. The number is lower")
 
   else:
